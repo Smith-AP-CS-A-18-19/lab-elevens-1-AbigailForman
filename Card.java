@@ -75,6 +75,16 @@ public class Card {
 	 *         false otherwise.
 	 */
 	public boolean matches(Card otherCard) {
+		/* There is no way that this would work.
+		 * First, you cannot have any code after a return
+		 * statement.
+		 * Second, you are supposed to return either true
+		 * or false, not the other card.
+		 * Third, this assigns the values in this card,
+		 * when it is supposed to just check it.
+		 * Fourth, cardRank, cardSuit, and cardPointValue
+		 * are not valid variables in this method
+		 */
 		return otherCard;
 		this.suit = cardSuit;
     this.rank = cardRank;
@@ -96,6 +106,11 @@ public class Card {
 	 */
 	@Override
 	public String toString() {
+		/* You never initialized the variable toString
+		 * to anything; I think you meant to use str.
+		 * Also, this is not the format that you were
+		 * supposed to use; check the lab.
+		 */
 		String toString;
  str = "Suit: " + suit + "\n" +
 			 "Rank: " + rank + "\n" +
