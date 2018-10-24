@@ -8,7 +8,7 @@ public class CardTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		Card card1 = new Card();
+		Card card1 = new Card("Ace", "Spades", 11);
 		/* You need to make sure write some code to
 		 * test your work. Good tests would be:
 		 * Create three Cards, two that are the same and

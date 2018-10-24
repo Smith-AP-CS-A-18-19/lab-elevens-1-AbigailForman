@@ -85,11 +85,14 @@ public class Card {
 		 * Fourth, cardRank, cardSuit, and cardPointValue
 		 * are not valid variables in this method
 		 */
-		return otherCard;
-		this.suit = cardSuit;
-    this.rank = cardRank;
-    this.pointValue = cardPointValue;
-    return otherCard;
+		if (suit().equals(otherCard.suit()) && rank().equals(otherCard.rank()) && pointValue() == otherCard.pointValue()) {
+			return true;
+		}
+		else {
+			return false;
+		}
+
+
   }
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
 
@@ -106,15 +109,14 @@ public class Card {
 	 */
 	@Override
 	public String toString() {
+
 		/* You never initialized the variable toString
 		 * to anything; I think you meant to use str.
 		 * Also, this is not the format that you were
 		 * supposed to use; check the lab.
 		 */
 		String toString;
- str = "Suit: " + suit + "\n" +
-			 "Rank: " + rank + "\n" +
-			 "Value: " + pointValue + "\n";
+		toString = rank + "of" + suit + "(point value = " + pointValue + ")";
 		return toString;
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
 	}
